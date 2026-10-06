@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>eWiz</title>
+  <defs>
+    <path id="tile-shape" d="M50 142C50 91.19 91.19 50 142 50H370C420.81 50 462 91.19 462 142V370C462 420.81 420.81 462 370 462H142C91.19 462 50 420.81 50 370Z"/>
+    <clipPath id="tile-clip"><use href="#tile-shape"/></clipPath>
+    <linearGradient id="tile-fill" x1="0" y1="50" x2="0" y2="462" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3d3e42"/><stop offset="1" stop-color="#1b1c1f"/></linearGradient>
+    <radialGradient id="tile-light" cx="120" cy="70" r="360" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff" stop-opacity="0.11"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+    <radialGradient id="tile-halo" cx="256" cy="250" r="190" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff" stop-opacity="0.07"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+    <linearGradient id="tile-rim" x1="0" y1="50" x2="0" y2="462" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff" stop-opacity="0.38"/><stop offset="0.18" stop-color="#fff" stop-opacity="0.16"/><stop offset="1" stop-color="#fff" stop-opacity="0.12"/></linearGradient>
+    <path id="hat-cone" d="M186.00 350.00L226.18 287.39A3.00 3.00 0 0 0 223.79 282.77L214.46 282.37A5.00 5.00 0 0 1 210.41 274.77L242.36 222.34A3.00 3.00 0 0 0 239.93 217.78L229.38 217.32A5.00 5.00 0 0 1 225.04 210.27L240.93 175.08A89 89 0 0 1 340.09 124.56A89 89 0 0 0 313.02 149.28L283.53 190.31A5.00 5.00 0 0 0 287.47 198.23L315.82 198.90A3.00 3.00 0 0 1 318.57 202.93L299.33 255.61A5.00 5.00 0 0 0 303.80 262.32L336.32 263.83A3.00 3.00 0 0 1 339.09 267.57L318.00 350.00Z"/>
+    <path id="hat-brim" d="M118.00 341.00A610 610 0 0 1 390.00 341.00A377 377 0 0 1 118.00 341.00Z"/>
+    <linearGradient id="silver" x1="0" y1="120" x2="0" y2="372" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset="0.55" stop-color="#e2e3e5"/><stop offset="1" stop-color="#b7b9bd"/></linearGradient>
+    <linearGradient id="brim-fill" x1="0" y1="318" x2="0" y2="362" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f1f1f2"/><stop offset="1" stop-color="#a9acb0"/></linearGradient>
+    <radialGradient id="crown-sheen" cx="262" cy="150" r="120" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff" stop-opacity="0.55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+    <mask id="cone-cut" maskUnits="userSpaceOnUse" x="0" y="0" width="512" height="512">
+      <rect width="512" height="512" fill="#fff"/>
+      <use href="#hat-brim" fill="#000" stroke="#000" stroke-width="12" stroke-linejoin="round"/>
+    </mask>
+    <filter id="drop" x="0" y="0" width="512" height="512" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10"/><feOffset dy="10"/><feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g id="tile">
+    <use href="#tile-shape" fill="url(#tile-fill)"/>
+    <use href="#tile-shape" fill="url(#tile-light)"/>
+    <use href="#tile-shape" fill="url(#tile-halo)"/>
+    <use href="#tile-shape" fill="none" stroke="url(#tile-rim)" stroke-width="5" clip-path="url(#tile-clip)"/>
+  </g>
+  <g id="icon" filter="url(#drop)">
+    <g mask="url(#cone-cut)">
+      <use href="#hat-cone" fill="url(#silver)"/>
+      <use href="#hat-cone" fill="url(#crown-sheen)"/>
+    </g>
+    <use href="#hat-brim" fill="url(#brim-fill)"/>
+  </g>
+  
+</svg>

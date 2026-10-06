@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>eWiz: charge-cell W</title>
+  <defs>
+    <path id="tile-shape" d="M50 142C50 91.19 91.19 50 142 50H370C420.81 50 462 91.19 462 142V370C462 420.81 420.81 462 370 462H142C91.19 462 50 420.81 50 370Z"/>
+    <linearGradient id="tile-fill" x1="0" y1="50" x2="0" y2="462" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0094ea"/>
+      <stop offset=".5" stop-color="#007bc4"/>
+      <stop offset="1" stop-color="#0f659e"/>
+    </linearGradient>
+    <linearGradient id="tile-highlight" x1="0" y1="50" x2="0" y2="187" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glyph-fill" x1="0" y1="132" x2="0" y2="365" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#e8eef3"/>
+    </linearGradient>
+    <clipPath id="tile-clip">
+      <use href="#tile-shape"/>
+    </clipPath>
+    <filter id="glyph-shadow" x="-25%" y="-25%" width="150%" height="160%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dy="8" result="blur"/>
+      <feFlood flood-color="#142839" flood-opacity=".35"/>
+      <feComposite in2="blur" operator="in"/>
+    </filter>
+  </defs>
+
+  <g id="tile">
+    <use href="#tile-shape" fill="url(#tile-fill)"/>
+    <use href="#tile-shape" fill="url(#tile-highlight)"/>
+    <use href="#tile-shape" fill="none" stroke="#fff" stroke-opacity=".12" stroke-width="2" clip-path="url(#tile-clip)"/>
+    <use href="#glyph" filter="url(#glyph-shadow)"/>
+  </g>
+
+  <!-- Three charge cells rising 70% / 85% / 100%, joined at the base as a double-u -->
+  <g id="icon">
+    <path id="glyph" fill="url(#glyph-fill)" d="M131 290V222A20 20 0 0 1 151 202H167A20 20 0 0 1 187 222V290A19 19 0 0 0 225 290V187A20 20 0 0 1 245 167H261A20 20 0 0 1 281 187V290A19 19 0 0 0 319 290V152A20 20 0 0 1 339 132H355A20 20 0 0 1 375 152V290A75 75 0 0 1 259.48 353.11A12 12 0 0 0 246.52 353.11A75 75 0 0 1 131 290Z"/>
+  </g>
+</svg>

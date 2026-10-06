@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logo Preview — Iterations</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding: 2rem; transition: background-color .3s, color .3s; }
+  body.light { background: #f5f5f5; color: #333; }
+  body.dark { background: #1a1a1a; color: #eee; }
+  .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
+  h1 { font-size: 1.5rem; font-weight: 600; } h2 { font-size: 1.1rem; font-weight: 600; margin: 2.5rem 0 1rem; }
+  .toggle { padding: .5rem 1rem; border: 1px solid currentColor; border-radius: 6px; background: transparent; color: inherit; cursor: pointer; font-size: .875rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+  .card { border: 1px solid rgba(128,128,128,.3); border-radius: 12px; overflow: hidden; }
+  .card-img { display: flex; align-items: center; justify-content: center; padding: 2rem; min-height: 240px; }
+  body.light .card-img { background: #fff; } body.dark .card-img { background: #2a2a2a; }
+  .card-img img { max-width: 100%; max-height: 200px; }
+  .grounds { display: grid; grid-template-columns: 1fr 1fr; }
+  .grounds span { display: flex; justify-content: center; padding: .9rem; }
+  .card-label { padding: .75rem 1rem; font-size: .875rem; font-weight: 500; border-top: 1px solid rgba(128,128,128,.3); }
+  body.light .card-label { background: #fafafa; } body.dark .card-label { background: #222; }
+  .favs { display: flex; gap: 2rem; flex-wrap: wrap; align-items: end; }
+  .fav { display: flex; flex-direction: column; align-items: center; gap: .5rem; }
+  .fl { font-size: .8rem; font-weight: 500; } .row { display: flex; gap: 1rem; align-items: end; } .sz { font-size: .75rem; opacity: .6; text-align: center; }
+</style>
+</head>
+<body class="light">
+  <div class="header">
+    <h1>Logo Preview — Iterations</h1>
+    <button class="toggle" onclick="document.body.classList.toggle('dark'); document.body.classList.toggle('light'); this.textContent = document.body.classList.contains('dark') ? '☀️ Light' : '🌙 Dark';">🌙 Dark</button>
+  </div>
+  <div class="grid">
+    <div class="card"><div class="card-img"><img src="iterations/iteration-8.svg" alt="iteration-8"></div><div class="grounds"><span style="background:#161616"><img src="iterations/iteration-8.svg" width="44"></span><span style="background:#f7f7f7"><img src="iterations/iteration-8.svg" width="44"></span></div><div class="card-label">iteration-8 — Final: approved body + brim, crisp knife cuts, r89 circle tip</div></div>
+    <div class="card"><div class="card-img"><img src="iterations/iteration-8-construction.svg" alt="iteration-8-construction"></div><div class="grounds"><span style="background:#161616"><img src="iterations/iteration-8-construction.svg" width="44"></span><span style="background:#f7f7f7"><img src="iterations/iteration-8-construction.svg" width="44"></span></div><div class="card-label">iteration-8-construction — Tip construction circles</div></div>
+    <div class="card"><div class="card-img"><img src="iterations/iteration-7.svg" alt="iteration-7"></div><div class="grounds"><span style="background:#161616"><img src="iterations/iteration-7.svg" width="44"></span><span style="background:#f7f7f7"><img src="iterations/iteration-7.svg" width="44"></span></div><div class="card-label">iteration-7 — Final: built from circles (tip = two r89 arcs, brim = r610/r377 lens)</div></div>
+    <div class="card"><div class="card-img"><img src="iterations/iteration-7-construction.svg" alt="iteration-7-construction"></div><div class="grounds"><span style="background:#161616"><img src="iterations/iteration-7-construction.svg" width="44"></span><span style="background:#f7f7f7"><img src="iterations/iteration-7-construction.svg" width="44"></span></div><div class="card-label">iteration-7-construction — Construction circles</div></div>
+    <div class="card"><div class="card-img"><img src="iterations/iteration-6.svg" alt="iteration-6"></div><div class="grounds"><span style="background:#161616"><img src="iterations/iteration-6.svg" width="44"></span><span style="background:#f7f7f7"><img src="iterations/iteration-6.svg" width="44"></span></div><div class="card-label">iteration-6 — Final: smooth curl, clean tip, no bevel line</div></div>
+    <div class="card"><div class="card-img"><img src="iterations/iteration-5.svg" alt="iteration-5"></div><div class="grounds"><span style="background:#161616"><img src="iterations/iteration-5.svg" width="44"></span><span style="background:#f7f7f7"><img src="iterations/iteration-5.svg" width="44"></span></div><div class="card-label">iteration-5 — Final: smoothed volt hat (from iteration-2)</div></div>
+    <div class="card"><div class="card-img"><img src="iterations/iteration-4.svg" alt="iteration-4"></div><div class="grounds"><span style="background:#161616"><img src="iterations/iteration-4.svg" width="44"></span><span style="background:#f7f7f7"><img src="iterations/iteration-4.svg" width="44"></span></div><div class="card-label">iteration-4 — Tip becomes the bolt</div></div>
+    <div class="card"><div class="card-img"><img src="iterations/iteration-3.svg" alt="iteration-3"></div><div class="grounds"><span style="background:#161616"><img src="iterations/iteration-3.svg" width="44"></span><span style="background:#f7f7f7"><img src="iterations/iteration-3.svg" width="44"></span></div><div class="card-label">iteration-3 — Classic hat, electric bolt emblem</div></div>
+    <div class="card"><div class="card-img"><img src="iterations/iteration-2.svg" alt="iteration-2"></div><div class="grounds"><span style="background:#161616"><img src="iterations/iteration-2.svg" width="44"></span><span style="background:#f7f7f7"><img src="iterations/iteration-2.svg" width="44"></span></div><div class="card-label">iteration-2 — The hat IS the bolt</div></div>
+    <div class="card"><div class="card-img"><img src="iterations/iteration-1.svg" alt="iteration-1"></div><div class="grounds"><span style="background:#161616"><img src="iterations/iteration-1.svg" width="44"></span><span style="background:#f7f7f7"><img src="iterations/iteration-1.svg" width="44"></span></div><div class="card-label">iteration-1 — Faceted silver hat, bolt cut-out</div></div>
+  </div>
+  <h2>Favicon Size Check</h2>
+  <div class="favs">
+  <div class="fav"><div class="fl">iteration-8</div><div class="row"><div><img src="iterations/iteration-8.svg" width="64" height="64"><div class="sz">64px</div></div><div><img src="iterations/iteration-8.svg" width="32" height="32"><div class="sz">32px</div></div><div><img src="iterations/iteration-8.svg" width="16" height="16"><div class="sz">16px</div></div></div></div>
+  <div class="fav"><div class="fl">iteration-7</div><div class="row"><div><img src="iterations/iteration-7.svg" width="64" height="64"><div class="sz">64px</div></div><div><img src="iterations/iteration-7.svg" width="32" height="32"><div class="sz">32px</div></div><div><img src="iterations/iteration-7.svg" width="16" height="16"><div class="sz">16px</div></div></div></div>
+  <div class="fav"><div class="fl">iteration-6</div><div class="row"><div><img src="iterations/iteration-6.svg" width="64" height="64"><div class="sz">64px</div></div><div><img src="iterations/iteration-6.svg" width="32" height="32"><div class="sz">32px</div></div><div><img src="iterations/iteration-6.svg" width="16" height="16"><div class="sz">16px</div></div></div></div>
+  <div class="fav"><div class="fl">iteration-5</div><div class="row"><div><img src="iterations/iteration-5.svg" width="64" height="64"><div class="sz">64px</div></div><div><img src="iterations/iteration-5.svg" width="32" height="32"><div class="sz">32px</div></div><div><img src="iterations/iteration-5.svg" width="16" height="16"><div class="sz">16px</div></div></div></div>
+  <div class="fav"><div class="fl">iteration-4</div><div class="row"><div><img src="iterations/iteration-4.svg" width="64" height="64"><div class="sz">64px</div></div><div><img src="iterations/iteration-4.svg" width="32" height="32"><div class="sz">32px</div></div><div><img src="iterations/iteration-4.svg" width="16" height="16"><div class="sz">16px</div></div></div></div>
+  <div class="fav"><div class="fl">iteration-3</div><div class="row"><div><img src="iterations/iteration-3.svg" width="64" height="64"><div class="sz">64px</div></div><div><img src="iterations/iteration-3.svg" width="32" height="32"><div class="sz">32px</div></div><div><img src="iterations/iteration-3.svg" width="16" height="16"><div class="sz">16px</div></div></div></div>
+  <div class="fav"><div class="fl">iteration-2</div><div class="row"><div><img src="iterations/iteration-2.svg" width="64" height="64"><div class="sz">64px</div></div><div><img src="iterations/iteration-2.svg" width="32" height="32"><div class="sz">32px</div></div><div><img src="iterations/iteration-2.svg" width="16" height="16"><div class="sz">16px</div></div></div></div>
+  <div class="fav"><div class="fl">iteration-1</div><div class="row"><div><img src="iterations/iteration-1.svg" width="64" height="64"><div class="sz">64px</div></div><div><img src="iterations/iteration-1.svg" width="32" height="32"><div class="sz">32px</div></div><div><img src="iterations/iteration-1.svg" width="16" height="16"><div class="sz">16px</div></div></div></div>
+  </div>
+</body>
+</html>
