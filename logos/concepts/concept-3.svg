@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>eWiz concept 3: The held charge</title>
+  <defs>
+    <path id="tile-shape" d="M50 142C50 91.19 91.19 50 142 50H370C420.81 50 462 91.19 462 142V370C462 420.81 420.81 462 370 462H142C91.19 462 50 420.81 50 370Z"/>
+    <clipPath id="tile-clip">
+      <use href="#tile-shape"/>
+    </clipPath>
+    <linearGradient id="tile-fill" x1="0" y1="50" x2="0" y2="462" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0094ea"/>
+      <stop offset="0.5" stop-color="#007bc4"/>
+      <stop offset="1" stop-color="#0f659e"/>
+    </linearGradient>
+    <linearGradient id="tile-sheen" x1="0" y1="50" x2="0" y2="187" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glyph-fill" x1="0" y1="130" x2="0" y2="382" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e8eef3"/>
+    </linearGradient>
+    <!-- Charge mass: pure white lit top edge, then settles into the cool base tone -->
+    <linearGradient id="charge-fill" x1="0" y1="231" x2="0" y2="330" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.1" stop-color="#ffffff"/>
+      <stop offset="0.16" stop-color="#eff4f8"/>
+      <stop offset="1" stop-color="#e8eef3"/>
+    </linearGradient>
+    <filter id="glyph-shadow" x="-25%" y="-20%" width="150%" height="150%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dy="8" result="blur"/>
+      <feFlood flood-color="#142839" flood-opacity="0.35"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Soft light rising off the held line into the empty headroom -->
+    <filter id="charge-glow" x="-40%" y="-60%" width="180%" height="180%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+      <feOffset dy="-7" result="halo"/>
+      <feFlood flood-color="#9dcbf4" flood-opacity="0.4"/>
+      <feComposite in2="halo" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g id="tile">
+    <use href="#tile-shape" fill="url(#tile-fill)"/>
+    <rect x="50" y="50" width="412" height="137" fill="url(#tile-sheen)" clip-path="url(#tile-clip)"/>
+    <use href="#tile-shape" fill="none" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2.5" clip-path="url(#tile-clip)"/>
+  </g>
+
+  <g id="icon" fill="url(#glyph-fill)" filter="url(#glyph-shadow)">
+    <!-- terminal -->
+    <path d="M236 130H276A12 12 0 0 1 288 142V162H224V142A12 12 0 0 1 236 130Z"/>
+    <!-- shell: 36-unit walls around a hollow cavity -->
+    <path fill-rule="evenodd" d="M220 154H292A56 56 0 0 1 348 210V326A56 56 0 0 1 292 382H220A56 56 0 0 1 164 326V210A56 56 0 0 1 220 154ZM220 190H292A20 20 0 0 1 312 210V326A20 20 0 0 1 292 346H220A20 20 0 0 1 200 326V210A20 20 0 0 1 220 190Z"/>
+    <!-- the held charge: stops at 80% on a crisp, flat line -->
+    <path fill="url(#charge-fill)" filter="url(#charge-glow)" d="M220 231H292A4 4 0 0 1 296 235V322A8 8 0 0 1 288 330H224A8 8 0 0 1 216 322V235A4 4 0 0 1 220 231Z"/>
+  </g>
+</svg>

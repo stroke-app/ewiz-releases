@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>eWiz — ring gauge held at the limit</title>
+  <defs>
+    <path id="tile-shape" d="M50 142C50 91.19 91.19 50 142 50H370C420.81 50 462 91.19 462 142V370C462 420.81 420.81 462 370 462H142C91.19 462 50 420.81 50 370Z"/>
+    <clipPath id="tile-clip">
+      <use href="#tile-shape"/>
+    </clipPath>
+
+    <linearGradient id="tile-fill" x1="0" y1="50" x2="0" y2="462" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0094ea"/>
+      <stop offset="0.5" stop-color="#007bc4"/>
+      <stop offset="1" stop-color="#0f659e"/>
+    </linearGradient>
+    <linearGradient id="tile-sheen" x1="0" y1="50" x2="0" y2="187" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="tile-glow" cx="256" cy="248" r="176" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#51b1fd" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#51b1fd" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="glyph-fill" x1="0" y1="130" x2="0" y2="382" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e8eef3"/>
+    </linearGradient>
+
+    <filter id="glyph-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dy="6" result="blur"/>
+      <feFlood flood-color="#142839" flood-opacity="0.35"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="stop-lift" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dy="3" result="blur"/>
+      <feFlood flood-color="#142839" flood-opacity="0.3"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g id="tile">
+    <use href="#tile-shape" fill="url(#tile-fill)"/>
+    <use href="#tile-shape" fill="url(#tile-glow)"/>
+    <rect x="50" y="50" width="412" height="137" fill="url(#tile-sheen)" clip-path="url(#tile-clip)"/>
+    <use href="#tile-shape" fill="none" stroke="#ffffff" stroke-opacity="0.12" stroke-width="3" clip-path="url(#tile-clip)"/>
+  </g>
+
+  <!-- Ring: centre 256,256 · radius 89 · width 62. Limit stop at 288° (80%). -->
+  <g id="icon" filter="url(#glyph-shadow)">
+    <circle id="track" cx="256" cy="256" r="89" fill="none" stroke="#ffffff" stroke-width="62" opacity="0.24"/>
+    <path id="charge" d="M256 167A89 89 0 1 1 176.11 295.23" fill="none" stroke="url(#glyph-fill)" stroke-width="62" stroke-linecap="round"/>
+    <rect id="limit" x="-18" y="-45" width="36" height="90" rx="12" fill="#ffffff" filter="url(#stop-lift)" transform="rotate(288 256 256) translate(256 167)"/>
+  </g>
+</svg>

@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>eWiz</title>
+  <defs>
+    <path id="tile-shape" d="M50 142C50 91.19 91.19 50 142 50H370C420.81 50 462 91.19 462 142V370C462 420.81 420.81 462 370 462H142C91.19 462 50 420.81 50 370Z"/>
+    <clipPath id="tile-clip"><use href="#tile-shape"/></clipPath>
+
+    <!-- Tile -->
+    <linearGradient id="tile-fill" x1="0" y1="50" x2="0" y2="462" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3b3c40"/>
+      <stop offset="1" stop-color="#1c1d20"/>
+    </linearGradient>
+    <radialGradient id="tile-light" cx="110" cy="90" r="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tile-top-edge" x1="0" y1="50" x2="0" y2="190" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Hat geometry -->
+    <path id="cone" d="M168 334C190 324 200 296 210 270L260 140C268 119 286 106 308 106C338 106 369 124 382 160L389 180C390 184 387 186 384 183C370 168 354 158 340 160C324 164 320 188 322 218C324 264 332 308 346 334C316 350 198 350 168 334Z"/>
+    <path id="bolt" d="M266 202H300L282 244H304L242 314L254 266H230Z"/>
+    <ellipse id="brim-top" cx="256" cy="334" rx="136" ry="30"/>
+    <clipPath id="cone-clip"><use href="#cone"/></clipPath>
+    <clipPath id="brim-clip"><use href="#brim-top"/></clipPath>
+
+    <!-- Silver -->
+    <linearGradient id="cone-fill" x1="176" y1="196" x2="352" y2="246" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.34" stop-color="#eceef0"/>
+      <stop offset="0.7" stop-color="#c3c5c9"/>
+      <stop offset="1" stop-color="#9fa1a6"/>
+    </linearGradient>
+    <radialGradient id="crease" cx="338" cy="168" r="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#55575c" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#55575c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cone-base" x1="0" y1="276" x2="0" y2="346" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6b6d72" stop-opacity="0"/>
+      <stop offset="1" stop-color="#6b6d72" stop-opacity="0.32"/>
+    </linearGradient>
+    <linearGradient id="brim-fill" x1="120" y1="0" x2="392" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.42" stop-color="#eceef0"/>
+      <stop offset="0.74" stop-color="#c3c5c9"/>
+      <stop offset="1" stop-color="#9fa1a6"/>
+    </linearGradient>
+    <linearGradient id="brim-lip" x1="0" y1="336" x2="0" y2="372" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b4b6bb"/>
+      <stop offset="1" stop-color="#7f8186"/>
+    </linearGradient>
+
+    <!-- Electric bolt -->
+    <linearGradient id="bolt-fill" x1="0" y1="202" x2="0" y2="314" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4cc3ff"/>
+      <stop offset="1" stop-color="#0084d1"/>
+    </linearGradient>
+
+    <filter id="hat-shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+    <filter id="soft" x="-30%" y="-80%" width="160%" height="260%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="sheen" x="-50%" y="-20%" width="200%" height="140%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <filter id="bolt-glow" x="-80%" y="-60%" width="260%" height="220%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <filter id="bolt-bloom" x="-40%" y="-30%" width="180%" height="160%">
+      <feGaussianBlur stdDeviation="3.5"/>
+    </filter>
+    <!-- glowing core + inset top edge, clipped to the bolt -->
+    <filter id="bolt-energy" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB">
+      <feMorphology in="SourceAlpha" operator="erode" radius="5" result="e1"/>
+      <feGaussianBlur in="e1" stdDeviation="4" result="b1"/>
+      <feFlood flood-color="#4cc3ff"/>
+      <feComposite in2="b1" operator="in" result="mid"/>
+      <feMorphology in="SourceAlpha" operator="erode" radius="10.5" result="e2"/>
+      <feGaussianBlur in="e2" stdDeviation="3" result="b2"/>
+      <feFlood flood-color="#e8fbff"/>
+      <feComposite in2="b2" operator="in" result="core"/>
+      <feOffset in="SourceAlpha" dy="3" result="off"/>
+      <feComposite in="SourceAlpha" in2="off" operator="out" result="lip"/>
+      <feFlood flood-color="#00304f" flood-opacity="0.7"/>
+      <feComposite in2="lip" operator="in" result="inset"/>
+      <feMerge result="all">
+        <feMergeNode in="SourceGraphic"/>
+        <feMergeNode in="mid"/>
+        <feMergeNode in="core"/>
+        <feMergeNode in="inset"/>
+      </feMerge>
+      <feComposite in="all" in2="SourceAlpha" operator="in"/>
+    </filter>
+  </defs>
+
+  <g id="tile">
+    <use href="#tile-shape" fill="url(#tile-fill)"/>
+    <use href="#tile-shape" fill="url(#tile-light)"/>
+    <g clip-path="url(#tile-clip)" fill="none">
+      <use href="#tile-shape" stroke="#fff" stroke-opacity="0.16" stroke-width="5"/>
+      <use href="#tile-shape" stroke="url(#tile-top-edge)" stroke-width="5"/>
+    </g>
+  </g>
+
+  <g id="icon" transform="translate(0 8)">
+    <g filter="url(#hat-shadow)">
+      <!-- brim: underside lip + top surface -->
+      <ellipse cx="256" cy="340" rx="136" ry="32" fill="url(#brim-lip)"/>
+      <use href="#brim-top" fill="url(#brim-fill)"/>
+      <!-- cone, bolt cut out (evenodd) -->
+      <path fill="url(#cone-fill)" fill-rule="evenodd" d="M168 334C190 324 200 296 210 270L260 140C268 119 286 106 308 106C338 106 369 124 382 160L389 180C390 184 387 186 384 183C370 168 354 158 340 160C324 164 320 188 322 218C324 264 332 308 346 334C316 350 198 350 168 334Z M266 202H300L282 244H304L242 314L254 266H230Z"/>
+    </g>
+    <!-- contact shadow of the cone on the brim -->
+    <g clip-path="url(#brim-clip)">
+      <ellipse cx="262" cy="342" rx="100" ry="14" fill="#55575c" opacity="0.5" filter="url(#soft)"/>
+    </g>
+    <!-- soft shading + metallic sheen on the cone -->
+    <g clip-path="url(#cone-clip)">
+      <rect x="150" y="100" width="250" height="260" fill="url(#crease)"/>
+      <rect x="150" y="270" width="250" height="90" fill="url(#cone-base)"/>
+      <path d="M232 318C236 262 252 196 282 140" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" opacity="0.7" filter="url(#sheen)"/>
+    </g>
+    <!-- electric emblem -->
+    <use href="#bolt" fill="#4cc3ff" opacity="0.7" filter="url(#bolt-glow)"/>
+    <use href="#bolt" fill="#4cc3ff" opacity="0.55" filter="url(#bolt-bloom)"/>
+    <use href="#bolt" fill="url(#bolt-fill)" filter="url(#bolt-energy)"/>
+    <!-- sparkle -->
+    <path fill="#f4f5f7" d="M168 150C171 168 176 173 194 176C176 179 171 184 168 202C165 184 160 179 142 176C160 173 165 168 168 150Z"/>
+  </g>
+</svg>

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>eWiz</title>
+  <defs>
+    <path id="tile-shape" d="M50 142C50 91.19 91.19 50 142 50H370C420.81 50 462 91.19 462 142V370C462 420.81 420.81 462 370 462H142C91.19 462 50 420.81 50 370Z"/>
+    <clipPath id="tile-clip"><use href="#tile-shape"/></clipPath>
+
+    <!-- Tile: graphite body, top-left key light, light inner rim -->
+    <linearGradient id="tile-fill" x1="0" y1="50" x2="0" y2="462" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3b3c40"/>
+      <stop offset="1" stop-color="#1c1d20"/>
+    </linearGradient>
+    <radialGradient id="tile-light" cx="110" cy="90" r="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tile-rim" x1="0" y1="50" x2="0" y2="462" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.34"/>
+      <stop offset="0.16" stop-color="#fff" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0.13"/>
+    </linearGradient>
+
+    <!-- Glyph geometry: wizard hat whose cone is a lightning bolt -->
+    <path id="hat-brim" d="M122 338A134 28 0 0 1 390 338V346A134 28 0 0 1 122 346Z"/>
+    <path id="hat-lip" d="M122 338A134 28 0 0 0 390 338V346A134 28 0 0 1 122 346Z"/>
+    <path id="hat-cone" d="M180 338L226.8 281.1Q229.4 278 225.4 278L201.2 278Q195.2 278 198.9 273.2L243.6 215.2Q246 212 242 212L216.1 212Q210.1 212 212.9 206.7C226.1 182 236.1 150 262.1 132C290.1 114 334.1 126 356.1 164C334.1 146 308.1 144 294.1 160L274.8 194.5Q272.8 198 276.8 198L318.8 198Q324.8 198 322.2 203.4L295.5 260.4Q293.8 264 297.8 264L340.9 264Q346.9 264 344.6 269.5L316 338C276 358 220 358 180 338Z"/>
+    <g id="hat-shape">
+      <use href="#hat-brim"/>
+      <use href="#hat-cone"/>
+    </g>
+
+    <!-- Glyph paint: brushed silver -->
+    <linearGradient id="silver" x1="0" y1="118" x2="0" y2="374" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.55" stop-color="#d9dadc"/>
+      <stop offset="1" stop-color="#a9abaf"/>
+    </linearGradient>
+    <linearGradient id="cone-shade" x1="190" y1="0" x2="350" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.10"/>
+      <stop offset="0.5" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.10"/>
+    </linearGradient>
+    <mask id="edge-light" maskUnits="userSpaceOnUse" x="0" y="0" width="512" height="512">
+      <use href="#hat-shape" fill="#fff"/>
+      <use href="#hat-shape" fill="#000" transform="translate(1.6 2.0)"/>
+    </mask>
+    <mask id="brim-top" maskUnits="userSpaceOnUse" x="0" y="0" width="512" height="512">
+      <use href="#hat-brim" fill="#fff"/>
+      <use href="#hat-cone" fill="#000"/>
+      <use href="#hat-lip" fill="#000"/>
+    </mask>
+    <filter id="glyph-shadow" x="0" y="0" width="512" height="512" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="9"/>
+      <feOffset dy="8"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.45"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="contact-blur" x="0" y="0" width="512" height="512" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <g id="tile">
+    <use href="#tile-shape" fill="url(#tile-fill)"/>
+    <use href="#tile-shape" fill="url(#tile-light)"/>
+    <use href="#tile-shape" fill="none" stroke="url(#tile-rim)" stroke-width="5" clip-path="url(#tile-clip)"/>
+  </g>
+
+  <g id="icon">
+    <use href="#hat-shape" fill="url(#silver)" filter="url(#glyph-shadow)"/>
+    <use href="#hat-cone" fill="url(#cone-shade)"/>
+    <!-- brim: darker underside lip + soft contact shadow under the cone -->
+    <use href="#hat-lip" fill="#000" fill-opacity="0.24"/>
+    <path d="M128 346.4A134 28 0 0 0 384 346.4" fill="none" stroke="#fff" stroke-opacity="0.55" stroke-width="1.5"/>
+    <path d="M176 334C220 360 276 360 320 334L322 342C276 370 220 370 174 342Z" fill="#000" fill-opacity="0.26" filter="url(#contact-blur)" mask="url(#brim-top)"/>
+    <!-- crisp light edge along the upper-left contours -->
+    <rect width="512" height="512" fill="#fff" fill-opacity="0.95" mask="url(#edge-light)"/>
+  </g>
+</svg>
