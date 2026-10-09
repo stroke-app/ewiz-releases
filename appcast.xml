@@ -6,16 +6,16 @@
     <description>eWiz updates</description>
     <language>en</language>
     <item>
-      <title>eWiz 0.18.6</title>
-      <pubDate>Wed, 07 Oct 2026 14:19:17 GMT</pubDate>
-      <sparkle:version>1806</sparkle:version>
-      <sparkle:shortVersionString>0.18.6</sparkle:shortVersionString>
+      <title>eWiz 0.18.7</title>
+      <pubDate>Fri, 09 Oct 2026 02:47:38 GMT</pubDate>
+      <sparkle:version>1807</sparkle:version>
+      <sparkle:shortVersionString>0.18.7</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
-<h4>Updating eWiz now shows what's happening and comes back on its own</h4>
-<p>Updates run through Sparkle: "Check for Updates…" (and the Update banner) open a window that checks, shows what's new, downloads with a progress bar, installs, and relaunches the new version — instead of the app quietly quitting and sometimes not reappearing. Checks still happen on launch and daily. One more update goes the old way to get there: this release installs through the previous updater, and every one after it through Sparkle.</p>
+<h4>The AI-agent server really no longer crashes when a session ends</h4>
+<p>The 0.18.5 fix only held on newer build tools, so the released <code>ewiz-mcp</code> still crashed every time Claude Code or another agent closed a session, which showed a "quit unexpectedly" report and skipped handing back any hold it had taken. It now exits cleanly whatever it's built with.</p>
       ]]></description>
-      <enclosure url="https://github.com/stroke-app/ewiz/releases/download/v0.18.6/eWiz-0.18.6.dmg" length="3481592" type="application/octet-stream" sparkle:edSignature="fYOuRnjQv5lHfsjPMqvEBtOBR01kdNWJTmRbmoMO1iG8MxxwJLaON+EhX0UDIgtp5285ynEidb57JLvK1D0LBg=="/>
+      <enclosure url="https://github.com/stroke-app/ewiz/releases/download/v0.18.7/eWiz-0.18.7.dmg" length="3482138" type="application/octet-stream" sparkle:edSignature="ajFyKW0knJNf+3l634Cusp1Y3qblnv7X05FezHYYaMSR1/u+0zOvO+cQIoZZAkxkWo+9xH9mPwIgSerGpobPAg=="/>
     </item>
   </channel>
 </rss>
