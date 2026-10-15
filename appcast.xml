@@ -6,16 +6,16 @@
     <description>eWiz updates</description>
     <language>en</language>
     <item>
-      <title>eWiz 0.18.7</title>
-      <pubDate>Fri, 09 Oct 2026 02:47:38 GMT</pubDate>
-      <sparkle:version>1807</sparkle:version>
-      <sparkle:shortVersionString>0.18.7</sparkle:shortVersionString>
+      <title>eWiz 0.18.8</title>
+      <pubDate>Thu, 15 Oct 2026 02:56:12 GMT</pubDate>
+      <sparkle:version>1808</sparkle:version>
+      <sparkle:shortVersionString>0.18.8</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
-<h4>The AI-agent server really no longer crashes when a session ends</h4>
-<p>The 0.18.5 fix only held on newer build tools, so the released <code>ewiz-mcp</code> still crashed every time Claude Code or another agent closed a session, which showed a "quit unexpectedly" report and skipped handing back any hold it had taken. It now exits cleanly whatever it's built with.</p>
+<h4>⌘Q no longer quits eWiz by accident</h4>
+<p>Clicking the panel or one of eWiz's windows makes eWiz the active app, so a ⌘Q meant for the app you were just using quit eWiz instead. It disappeared from the menu bar without a word, and hotkeys, automations and keep-awake stopped until you opened it again. ⌘Q now does nothing in eWiz; the power button in the panel is how you quit.</p>
       ]]></description>
-      <enclosure url="https://github.com/stroke-app/ewiz/releases/download/v0.18.7/eWiz-0.18.7.dmg" length="3482138" type="application/octet-stream" sparkle:edSignature="ajFyKW0knJNf+3l634Cusp1Y3qblnv7X05FezHYYaMSR1/u+0zOvO+cQIoZZAkxkWo+9xH9mPwIgSerGpobPAg=="/>
+      <enclosure url="https://github.com/stroke-app/ewiz/releases/download/v0.18.8/eWiz-0.18.8.dmg" length="3483116" type="application/octet-stream" sparkle:edSignature="WUrLWQP6MUB8W9cVrvF8pJ8Ml7izpmjyTDO8c8LYKHDCAH62/5zblJU/kqY0w6yAE9R9IvfhADKgaSeC4kdkDQ=="/>
     </item>
   </channel>
 </rss>
