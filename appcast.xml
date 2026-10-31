@@ -6,21 +6,18 @@
     <description>eWiz updates</description>
     <language>en</language>
     <item>
-      <title>eWiz 0.19.0</title>
-      <pubDate>Wed, 28 Oct 2026 14:37:15 GMT</pubDate>
-      <sparkle:version>1900</sparkle:version>
-      <sparkle:shortVersionString>0.19.0</sparkle:shortVersionString>
+      <title>eWiz 0.19.1</title>
+      <pubDate>Sat, 31 Oct 2026 15:49:19 GMT</pubDate>
+      <sparkle:version>1901</sparkle:version>
+      <sparkle:shortVersionString>0.19.1</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
-<h4>Wi-Fi and Bluetooth can wait before switching off when the lid closes</h4>
-<p>Settings › When the lid closes › Switch off: immediately, as before, or after 10 seconds up to 30 minutes. Open the lid again inside that time and your connections, AirPods and calls included, are never touched. When the time is up and the lid is still shut, eWiz wakes the Mac for a moment to switch them off. A docked Mac switches off as it sleeps, as before, because a wake would light the monitor on the desk. This needs the updated helper, which installs itself; with an older one the radios switch off at sleep as they always have.</p>
-<p>Lid-close radios are also more dependable. Sleep now waits for them to switch off; it used to start straight away, so they could go off late, sometimes only at the next wake. A wake with the lid still shut no longer turns them back on inside the closed lid or logs a lid session. And a second sleep in the same close no longer forgets they were on, which could leave them off when you opened the lid.</p>
-<h4>The helper no longer crashes when the app stops waiting for it, and a held charge stays held across helper restarts</h4>
-<p>When the helper was busy (a sleep transition, a settings write) the app gave up on its request after a few seconds and closed the connection. The helper's reply to that closed connection raised a broken-pipe signal that killed it; launchd started it again, but the restarted helper had forgotten where "don't charge" had parked the battery and let it charge on to the limit, and the app showed "The helper installed but isn't responding" beside "Installed and running" until it was relaunched. The helper now survives a client that hangs up, remembers the hold level on disk, the app waits longer for a freshly installed helper to come up, and the error clears as soon as the helper answers.</p>
-<h4>The menu-bar battery no longer gets stuck showing a pause after you unplug</h4>
-<p>Unplugging while the charge was held plays a short animation of the pause mark dropping away. If the lid had just opened or the displays were changing, that animation could stop on its first frame and stay there, so an unplugged battery kept a pause mark until the next plug-in. It now always finishes.</p>
+<h4>The menu-bar battery now follows the cable straight away</h4>
+<p>Plugging in or unplugging could leave the icon showing the old state for up to 45 seconds, because what the helper was doing (holding or draining) was only re-checked every 30 seconds. The app now asks the helper the moment the cable changes, and once you unplug, the icon stops treating the battery as still on the charger. The unplug sound and haptic, which that stale state could silence, now play again.</p>
+<h4>The menu-bar panel no longer stops responding after eWiz has been running a while</h4>
+<p>After hours of running, the panel could open looking normal while every button, toggle and mode in it did nothing until eWiz was restarted. The panel is now built fresh each time it opens, so it can't go stale. It also opens fully on screen at the right edge, no longer flickers when switching modes, and keeps a failed helper install's error visible after the password prompt closes it.</p>
       ]]></description>
-      <enclosure url="https://github.com/stroke-app/ewiz/releases/download/v0.19.0/eWiz-0.19.0.dmg" length="3496785" type="application/octet-stream" sparkle:edSignature="Xlvu3xGmMz5JHjfjYOytw/B8NF8OYrugj0Q9GJzw9dbVscZrNOlQP3o8shgyVcMhJXU9YYmhg3zvDtHHHxKNCw=="/>
+      <enclosure url="https://github.com/stroke-app/ewiz/releases/download/v0.19.1/eWiz-0.19.1.dmg" length="3504619" type="application/octet-stream" sparkle:edSignature="iePthVKrM1UZoIS1oS1SqlEtRsDkiEccvkQf8KnY3BgxjEZILVAj1PruUmage2ksYR24V7ElGPC8izTgi0mODw=="/>
     </item>
   </channel>
 </rss>
