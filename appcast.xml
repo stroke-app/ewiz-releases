@@ -6,18 +6,16 @@
     <description>eWiz updates</description>
     <language>en</language>
     <item>
-      <title>eWiz 0.19.1</title>
-      <pubDate>Sat, 31 Oct 2026 15:49:19 GMT</pubDate>
-      <sparkle:version>1901</sparkle:version>
-      <sparkle:shortVersionString>0.19.1</sparkle:shortVersionString>
+      <title>eWiz 0.19.2</title>
+      <pubDate>Thu, 05 Nov 2026 02:57:29 GMT</pubDate>
+      <sparkle:version>1902</sparkle:version>
+      <sparkle:shortVersionString>0.19.2</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
-<h4>The menu-bar battery now follows the cable straight away</h4>
-<p>Plugging in or unplugging could leave the icon showing the old state for up to 45 seconds, because what the helper was doing (holding or draining) was only re-checked every 30 seconds. The app now asks the helper the moment the cable changes, and once you unplug, the icon stops treating the battery as still on the charger. The unplug sound and haptic, which that stale state could silence, now play again.</p>
-<h4>The menu-bar panel no longer stops responding after eWiz has been running a while</h4>
-<p>After hours of running, the panel could open looking normal while every button, toggle and mode in it did nothing until eWiz was restarted. The panel is now built fresh each time it opens, so it can't go stale. It also opens fully on screen at the right edge, no longer flickers when switching modes, and keeps a failed helper install's error visible after the password prompt closes it.</p>
+<h4>eWiz's controls no longer stop working after a plug or unplug sound fails</h4>
+<p>If the audio output changed at the wrong moment (headphones, a display's speakers), the plug or unplug sound could fail inside macOS's audio framework. eWiz didn't crash, but from then on every button, toggle and mode in the menu-bar panel did nothing until eWiz was restarted. A sound that fails is now skipped and eWiz carries on. This is the real fix for the unresponsive panel that 0.19.1 set out to fix by rebuilding the panel on each open.</p>
       ]]></description>
-      <enclosure url="https://github.com/stroke-app/ewiz/releases/download/v0.19.1/eWiz-0.19.1.dmg" length="3504619" type="application/octet-stream" sparkle:edSignature="iePthVKrM1UZoIS1oS1SqlEtRsDkiEccvkQf8KnY3BgxjEZILVAj1PruUmage2ksYR24V7ElGPC8izTgi0mODw=="/>
+      <enclosure url="https://github.com/stroke-app/ewiz/releases/download/v0.19.2/eWiz-0.19.2.dmg" length="3505910" type="application/octet-stream" sparkle:edSignature="EW0XinddS7V61XZup+/MI9Q3b/Q7rCh9SC7z4tb151x7/q5XN6OH7G9YlELDwIE2qUEO0aTt2F8svje68AMdDg=="/>
     </item>
   </channel>
 </rss>
