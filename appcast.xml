@@ -6,16 +6,16 @@
     <description>eWiz updates</description>
     <language>en</language>
     <item>
-      <title>eWiz 0.19.2</title>
-      <pubDate>Thu, 05 Nov 2026 02:57:29 GMT</pubDate>
-      <sparkle:version>1902</sparkle:version>
-      <sparkle:shortVersionString>0.19.2</sparkle:shortVersionString>
+      <title>eWiz 0.19.3</title>
+      <pubDate>Sat, 07 Nov 2026 13:09:00 GMT</pubDate>
+      <sparkle:version>1903</sparkle:version>
+      <sparkle:shortVersionString>0.19.3</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
-<h4>eWiz's controls no longer stop working after a plug or unplug sound fails</h4>
-<p>If the audio output changed at the wrong moment (headphones, a display's speakers), the plug or unplug sound could fail inside macOS's audio framework. eWiz didn't crash, but from then on every button, toggle and mode in the menu-bar panel did nothing until eWiz was restarted. A sound that fails is now skipped and eWiz carries on. This is the real fix for the unresponsive panel that 0.19.1 set out to fix by rebuilding the panel on each open.</p>
+<h4>No more password prompt after every restart</h4>
+<p>At login the app could ask for the helper before the helper had finished starting, decide it was missing, and ask for your password to install it again. It now waits up to two minutes for an installed helper to answer and shows "Starting helper…" meanwhile.</p>
       ]]></description>
-      <enclosure url="https://github.com/stroke-app/ewiz/releases/download/v0.19.2/eWiz-0.19.2.dmg" length="3505910" type="application/octet-stream" sparkle:edSignature="EW0XinddS7V61XZup+/MI9Q3b/Q7rCh9SC7z4tb151x7/q5XN6OH7G9YlELDwIE2qUEO0aTt2F8svje68AMdDg=="/>
+      <enclosure url="https://github.com/stroke-app/ewiz/releases/download/v0.19.3/eWiz-0.19.3.dmg" length="3505223" type="application/octet-stream" sparkle:edSignature="bI1lRLhZHWe1WuTpIiq5lm/uQ/kfZ2DS36FKs8N3YGtvbD/ufNUlmzIn7dsMXjzBZVN89dbkBb65ModszLVUDQ=="/>
     </item>
   </channel>
 </rss>
