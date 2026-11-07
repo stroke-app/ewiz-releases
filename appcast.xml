@@ -6,16 +6,16 @@
     <description>eWiz updates</description>
     <language>en</language>
     <item>
-      <title>eWiz 0.19.3</title>
-      <pubDate>Sat, 07 Nov 2026 13:09:00 GMT</pubDate>
-      <sparkle:version>1903</sparkle:version>
-      <sparkle:shortVersionString>0.19.3</sparkle:shortVersionString>
+      <title>eWiz 0.19.4</title>
+      <pubDate>Sat, 07 Nov 2026 13:23:07 GMT</pubDate>
+      <sparkle:version>1904</sparkle:version>
+      <sparkle:shortVersionString>0.19.4</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
-<h4>No more password prompt after every restart</h4>
-<p>At login the app could ask for the helper before the helper had finished starting, decide it was missing, and ask for your password to install it again. It now waits up to two minutes for an installed helper to answer and shows "Starting helper…" meanwhile.</p>
+<h4>Permissions and the helper now survive updates</h4>
+<p>eWiz is now signed with its own certificate instead of a one-off signature, so macOS keeps Bluetooth and other permissions across updates, and the helper updates itself without asking for your password. The first update after this one asks once more; later ones don't.</p>
       ]]></description>
-      <enclosure url="https://github.com/stroke-app/ewiz/releases/download/v0.19.3/eWiz-0.19.3.dmg" length="3505223" type="application/octet-stream" sparkle:edSignature="bI1lRLhZHWe1WuTpIiq5lm/uQ/kfZ2DS36FKs8N3YGtvbD/ufNUlmzIn7dsMXjzBZVN89dbkBb65ModszLVUDQ=="/>
+      <enclosure url="https://github.com/stroke-app/ewiz/releases/download/v0.19.4/eWiz-0.19.4.dmg" length="3518805" type="application/octet-stream" sparkle:edSignature="A7gH2YvHetYaKeGL56FcgNmM0GXWAQVOFj3yuaPbPd16wbfDUhGB8kZrVapFZujIWsCfLnStda04ixWRwUqkBg=="/>
     </item>
   </channel>
 </rss>
