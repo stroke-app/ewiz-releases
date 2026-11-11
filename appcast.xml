@@ -6,16 +6,26 @@
     <description>eWiz updates</description>
     <language>en</language>
     <item>
-      <title>eWiz 0.19.4</title>
-      <pubDate>Sat, 07 Nov 2026 13:23:07 GMT</pubDate>
-      <sparkle:version>1904</sparkle:version>
-      <sparkle:shortVersionString>0.19.4</sparkle:shortVersionString>
+      <title>eWiz 0.19.5</title>
+      <pubDate>Wed, 11 Nov 2026 19:43:39 GMT</pubDate>
+      <sparkle:version>1905</sparkle:version>
+      <sparkle:shortVersionString>0.19.5</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
-<h4>Permissions and the helper now survive updates</h4>
-<p>eWiz is now signed with its own certificate instead of a one-off signature, so macOS keeps Bluetooth and other permissions across updates, and the helper updates itself without asking for your password. The first update after this one asks once more; later ones don't.</p>
+<h4>AI agents hear about a low battery</h4>
+<p>When this Mac is unplugged and running low, eWiz tells Claude Code so it can save its work and wrap up: live, through a Claude Code channel, or at the next message or tool call through a hook. Settings › AI Agents has the switch, the warning level, and the command and hook to copy.</p>
+<h4>The menu bar switches to charging promptly</h4>
+<p>After a plug-in, eWiz asked the helper for its status only twice, both before the helper had reacted, and never again once current actually started flowing, so "Plugged in" or "Held" could stay up for most of a minute. It now asks again over the next ten seconds, and also when the charger takes over and when charging starts or stops.</p>
+<h4>The helper reacts the moment you plug in</h4>
+<p>It used to notice a plug or unplug only on its next check, up to 10 seconds later, or a full minute after the lid had been closed on battery. Until then the charge limit, the hold and the status the menu shows all trailed the cable. The helper now wakes on every power-source change. This updates the helper, which installs itself without a password.</p>
+<h4>History shows when the lid was closed and what it cost</h4>
+<p>A row of tiles at the top sums up the range: time on battery and drain while awake, how long the lid was closed and how often, drain while asleep, and charge gained. The chart shades lid-closed spells, so a night no longer reads as one unexplained straight line. Lid rows show the full close-to-open time and whether the Mac was on the charger, plus roughly what a night would cost. On Battery rows say when the lid was closed during them, and the Daily Summary adds lid-closed time and its drain, including days the Mac slept straight through.</p>
+<h4>A close on the charger no longer reads as a perfect night</h4>
+<p>eWiz now records whether the Mac was plugged in when the lid closed and opened. A close that charged shows the gain instead of "no drop", and the Sealed Sleep result only counts closes on battery, so "51% → 80%, no drop" can't pass for zero drain. The "Never" hibernate option now says what it costs: about 3% a day.</p>
+<h4>AI agents can now change power settings when you ask</h4>
+<p>Through eWiz's MCP server, Claude and other agents can turn Low Power Mode on or off, switch the eWiz mode, set the charge limit, pause or resume charging, and change sleep settings like Power Nap. <code>ewiz_status</code> now also reports the charge limit, mode, sleep settings and temperature. A new switch in Settings › AI Agents turns this off.</p>
       ]]></description>
-      <enclosure url="https://github.com/stroke-app/ewiz/releases/download/v0.19.4/eWiz-0.19.4.dmg" length="3518805" type="application/octet-stream" sparkle:edSignature="A7gH2YvHetYaKeGL56FcgNmM0GXWAQVOFj3yuaPbPd16wbfDUhGB8kZrVapFZujIWsCfLnStda04ixWRwUqkBg=="/>
+      <enclosure url="https://github.com/stroke-app/ewiz/releases/download/v0.19.5/eWiz-0.19.5.dmg" length="3611804" type="application/octet-stream" sparkle:edSignature="13cgvyq2EebKt16VGsrJ4mVWkYPnxCK9lnLt1ejgil7LZca9FEqJFukNcliGNRr0jXdBWyVEU9I6YcJG+GRPDA=="/>
     </item>
   </channel>
 </rss>
