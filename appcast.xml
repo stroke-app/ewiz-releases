@@ -6,26 +6,20 @@
     <description>eWiz updates</description>
     <language>en</language>
     <item>
-      <title>eWiz 0.19.5</title>
-      <pubDate>Wed, 11 Nov 2026 19:43:39 GMT</pubDate>
-      <sparkle:version>1905</sparkle:version>
-      <sparkle:shortVersionString>0.19.5</sparkle:shortVersionString>
+      <title>eWiz 0.19.6</title>
+      <pubDate>Sun, 15 Nov 2026 13:39:33 GMT</pubDate>
+      <sparkle:version>1906</sparkle:version>
+      <sparkle:shortVersionString>0.19.6</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
-<h4>AI agents hear about a low battery</h4>
-<p>When this Mac is unplugged and running low, eWiz tells Claude Code so it can save its work and wrap up: live, through a Claude Code channel, or at the next message or tool call through a hook. Settings › AI Agents has the switch, the warning level, and the command and hook to copy.</p>
-<h4>The menu bar switches to charging promptly</h4>
-<p>After a plug-in, eWiz asked the helper for its status only twice, both before the helper had reacted, and never again once current actually started flowing, so "Plugged in" or "Held" could stay up for most of a minute. It now asks again over the next ten seconds, and also when the charger takes over and when charging starts or stops.</p>
-<h4>The helper reacts the moment you plug in</h4>
-<p>It used to notice a plug or unplug only on its next check, up to 10 seconds later, or a full minute after the lid had been closed on battery. Until then the charge limit, the hold and the status the menu shows all trailed the cable. The helper now wakes on every power-source change. This updates the helper, which installs itself without a password.</p>
-<h4>History shows when the lid was closed and what it cost</h4>
-<p>A row of tiles at the top sums up the range: time on battery and drain while awake, how long the lid was closed and how often, drain while asleep, and charge gained. The chart shades lid-closed spells, so a night no longer reads as one unexplained straight line. Lid rows show the full close-to-open time and whether the Mac was on the charger, plus roughly what a night would cost. On Battery rows say when the lid was closed during them, and the Daily Summary adds lid-closed time and its drain, including days the Mac slept straight through.</p>
-<h4>A close on the charger no longer reads as a perfect night</h4>
-<p>eWiz now records whether the Mac was plugged in when the lid closed and opened. A close that charged shows the gain instead of "no drop", and the Sealed Sleep result only counts closes on battery, so "51% → 80%, no drop" can't pass for zero drain. The "Never" hibernate option now says what it costs: about 3% a day.</p>
-<h4>AI agents can now change power settings when you ask</h4>
-<p>Through eWiz's MCP server, Claude and other agents can turn Low Power Mode on or off, switch the eWiz mode, set the charge limit, pause or resume charging, and change sleep settings like Power Nap. <code>ewiz_status</code> now also reports the charge limit, mode, sleep settings and temperature. A new switch in Settings › AI Agents turns this off.</p>
+<h4>Awake no longer outlives a restart or a nearly empty battery</h4>
+<p>An "until I turn it off" session was restored on every launch, including after a reboot, so a single tap could keep the screen on for days, on battery too. It now comes back only within the same boot (an update relaunch or a crash), and on battery it ends when the charge falls to 15%.</p>
+<h4>The menu bar and panel follow the cable and charging as they change</h4>
+<p>eWiz now listens to the battery itself, so current starting after a resume or a plug-in, and pulling the cable while a hold has the adapter cut, both show up in a second instead of on the next poll. A timed pause leaves "Charging paused" the moment it runs out. A slider closed mid-drag can no longer freeze the panel's status until relaunch, and an older status reply can no longer overwrite a newer one. The helper also reacts when charging starts or stops, not only when the power source switches.</p>
+<h4>Menu bar and panel fixes</h4>
+<p>A hold that cuts the adapter no longer plays the unplug and plug-in sounds or the overlay, and the icon and gauge keep their on-power colour while it holds. The gauge's marker shows where charging actually stops (macOS's step, or the hold's level), the "Resumes in" and Awake countdowns tick while the panel is open, and the panel no longer redraws every five seconds when nothing changed. The status item has a VoiceOver label and tooltip, and turning on Reduce Motion takes effect at once, including the gauge's pulse.</p>
       ]]></description>
-      <enclosure url="https://github.com/stroke-app/ewiz/releases/download/v0.19.5/eWiz-0.19.5.dmg" length="3611804" type="application/octet-stream" sparkle:edSignature="13cgvyq2EebKt16VGsrJ4mVWkYPnxCK9lnLt1ejgil7LZca9FEqJFukNcliGNRr0jXdBWyVEU9I6YcJG+GRPDA=="/>
+      <enclosure url="https://github.com/stroke-app/ewiz/releases/download/v0.19.6/eWiz-0.19.6.dmg" length="3622744" type="application/octet-stream" sparkle:edSignature="0cseipQ2zyEis6uAjaNfrNuqF3+SBJ6bULScrS7bGT5/5E4d4YOV1dfdJwg6p/XXGVmt8UYja5jix8PM/5m2Bw=="/>
     </item>
   </channel>
 </rss>
