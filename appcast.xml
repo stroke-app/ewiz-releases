@@ -6,16 +6,16 @@
     <description>eWiz updates</description>
     <language>en</language>
     <item>
-      <title>eWiz 0.19.7</title>
-      <pubDate>Sun, 15 Nov 2026 15:08:00 GMT</pubDate>
-      <sparkle:version>1907</sparkle:version>
-      <sparkle:shortVersionString>0.19.7</sparkle:shortVersionString>
+      <title>eWiz 0.19.8</title>
+      <pubDate>Sun, 15 Nov 2026 15:27:27 GMT</pubDate>
+      <sparkle:version>1908</sparkle:version>
+      <sparkle:shortVersionString>0.19.8</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
-<h4>The helper update from 0.19.6 now actually installs, and plugging in no longer looks like a full battery</h4>
-<p>0.19.6 changed the helper so it notices charging starting, but didn't bump the helper's build number, so the app never replaced the running helper and kept the old one. That is now build 30 and installs on launch. In the seconds between plugging in and current flowing (and while the helper settles after wake), the menu-bar icon drew the pause mark, which on the bars style reads as a full battery over a 32% level. It now shows just the level until the bolt appears, and the panel says "Charging starts in a moment" while settling.</p>
+<h4>Plugging in shows "Charging" at once, and the MagSafe light stops flickering</h4>
+<p>macOS's charging flag can lag a plug-in by over 20 seconds while current is already flowing into the battery. eWiz waited on that flag, so the panel said "Plugged in, not charging", the icon had no bolt, and the MagSafe light went amber, then green, then amber again. eWiz now treats current flowing into the battery as charging. Also adds <code>scripts/plug-trace.py</code>, which logs the battery, macOS, the helper and the menu bar side by side across a plug or unplug.</p>
       ]]></description>
-      <enclosure url="https://github.com/stroke-app/ewiz/releases/download/v0.19.7/eWiz-0.19.7.dmg" length="3622961" type="application/octet-stream" sparkle:edSignature="haaGmygaxqu9LmFRiuQzqlTjxqAQFihVSwwRdeXyC3uJvNxtokWxq1QSi7b264G1Gm3MhxhLg2KIDxFydAFPCQ=="/>
+      <enclosure url="https://github.com/stroke-app/ewiz/releases/download/v0.19.8/eWiz-0.19.8.dmg" length="3623468" type="application/octet-stream" sparkle:edSignature="0nY8nKDrrcNlGiq0SRyArG8ZFlXPJgCkxwIEf4WjBwQT+bRdr1QD2QLcGgIunkK4qb/bN9eDOxmYHl/+nbAICw=="/>
     </item>
   </channel>
 </rss>
