@@ -6,16 +6,16 @@
     <description>eWiz updates</description>
     <language>en</language>
     <item>
-      <title>eWiz 0.19.8</title>
-      <pubDate>Sun, 15 Nov 2026 15:27:27 GMT</pubDate>
-      <sparkle:version>1908</sparkle:version>
-      <sparkle:shortVersionString>0.19.8</sparkle:shortVersionString>
+      <title>eWiz 0.19.9</title>
+      <pubDate>Sun, 15 Nov 2026 16:09:34 GMT</pubDate>
+      <sparkle:version>1909</sparkle:version>
+      <sparkle:shortVersionString>0.19.9</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
-<h4>Plugging in shows "Charging" at once, and the MagSafe light stops flickering</h4>
-<p>macOS's charging flag can lag a plug-in by over 20 seconds while current is already flowing into the battery. eWiz waited on that flag, so the panel said "Plugged in, not charging", the icon had no bolt, and the MagSafe light went amber, then green, then amber again. eWiz now treats current flowing into the battery as charging. Also adds <code>scripts/plug-trace.py</code>, which logs the battery, macOS, the helper and the menu bar side by side across a plug or unplug.</p>
+<h4>Switching the charge limit on stops charging at once, and the cable no longer reads as unplugged while the battery runs down to the limit</h4>
+<p>On Macs that limit through macOS's own charge limit, macOS took about 40 seconds to act after the limit was set, so the battery kept charging past it and the panel said "Charging". eWiz now cuts the adapter for that gap: charging stops in about a second, and macOS's limit takes over within 90 seconds. On these Macs, an adapter cut (eWiz's, or macOS's own while it drains to the limit) also looked exactly like pulling the cable, so the panel said "On battery" and a hold could play the unplug sound. eWiz now reads the cable from the charger's own "can charge" signal, which only a real unplug clears.</p>
       ]]></description>
-      <enclosure url="https://github.com/stroke-app/ewiz/releases/download/v0.19.8/eWiz-0.19.8.dmg" length="3623468" type="application/octet-stream" sparkle:edSignature="0nY8nKDrrcNlGiq0SRyArG8ZFlXPJgCkxwIEf4WjBwQT+bRdr1QD2QLcGgIunkK4qb/bN9eDOxmYHl/+nbAICw=="/>
+      <enclosure url="https://github.com/stroke-app/ewiz/releases/download/v0.19.9/eWiz-0.19.9.dmg" length="3626553" type="application/octet-stream" sparkle:edSignature="LTvAir3lY+W8p8J2rro3dd0R/ElrXaZA+e9F/0tR3eGBhcu5ZMbSJBmYaCRILZRmiPc3wwIN1tnMBnoYwJ/cDA=="/>
     </item>
   </channel>
 </rss>
