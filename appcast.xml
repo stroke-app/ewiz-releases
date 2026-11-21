@@ -6,16 +6,18 @@
     <description>eWiz updates</description>
     <language>en</language>
     <item>
-      <title>eWiz 0.20.1</title>
-      <pubDate>Sat, 21 Nov 2026 05:40:33 GMT</pubDate>
-      <sparkle:version>2001</sparkle:version>
-      <sparkle:shortVersionString>0.20.1</sparkle:shortVersionString>
+      <title>eWiz 0.20.2</title>
+      <pubDate>Sat, 21 Nov 2026 06:58:58 GMT</pubDate>
+      <sparkle:version>2002</sparkle:version>
+      <sparkle:shortVersionString>0.20.2</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
-<h4>eWiz is now labelled as a public beta</h4>
-<p>Settings › About shows a Beta badge and a line on what that means, and the version under Updates reads "beta" too. The label goes away by itself at 1.0. Until then, <b>Report a Bug</b> in About is the most helpful thing you can do; it attaches the diagnostics for you.</p>
+<h4>eWiz now tells you when macOS charges past your limit</h4>
+<p>On Macs where eWiz controls charging through macOS's own charge limit, macOS sometimes switches that limit off by itself, usually while it recalibrates the battery, and charges to full. eWiz kept asking for your limit, but nothing said why the battery went past it. Now the menu says "macOS is charging past the 80% limit" with the reason, and you get a notification when it starts.</p>
+<h4>Check for Updates is in the Settings sidebar</h4>
+<p>When an update is ready, the sidebar shows an "Update to v…" button. eWiz also checks for updates every four hours instead of once a day, so fixes reach you sooner during the beta.</p>
       ]]></description>
-      <enclosure url="https://github.com/stroke-app/ewiz/releases/download/v0.20.1/eWiz-0.20.1.dmg" length="3659638" type="application/octet-stream" sparkle:edSignature="umXOGwwCpl8i9MarNwnkbx7qoHvA6CfwVd1UU2IgfkgrGo9SOPqvp0LsM+Q1Sn+uckjJcuXuPVLupBpKGiE3Bw=="/>
+      <enclosure url="https://github.com/stroke-app/ewiz/releases/download/v0.20.2/eWiz-0.20.2.dmg" length="3664465" type="application/octet-stream" sparkle:edSignature="jRIMyCIeVE2K6fPl1XsqSO6epxNiXmVcDZWly1zfPfGNnnrYViP018ZBGnCiNPTYZ8FtaXxx28U7DYqyS6ooDw=="/>
     </item>
   </channel>
 </rss>
