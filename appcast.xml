@@ -6,18 +6,16 @@
     <description>eWiz updates</description>
     <language>en</language>
     <item>
-      <title>eWiz 0.20.2</title>
-      <pubDate>Sat, 21 Nov 2026 06:58:58 GMT</pubDate>
-      <sparkle:version>2002</sparkle:version>
-      <sparkle:shortVersionString>0.20.2</sparkle:shortVersionString>
+      <title>eWiz 0.20.3</title>
+      <pubDate>Sat, 21 Nov 2026 07:18:23 GMT</pubDate>
+      <sparkle:version>2003</sparkle:version>
+      <sparkle:shortVersionString>0.20.3</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
-<h4>eWiz now tells you when macOS charges past your limit</h4>
-<p>On Macs where eWiz controls charging through macOS's own charge limit, macOS sometimes switches that limit off by itself, usually while it recalibrates the battery, and charges to full. eWiz kept asking for your limit, but nothing said why the battery went past it. Now the menu says "macOS is charging past the 80% limit" with the reason, and you get a notification when it starts.</p>
-<h4>Check for Updates is in the Settings sidebar</h4>
-<p>When an update is ready, the sidebar shows an "Update to v…" button. eWiz also checks for updates every four hours instead of once a day, so fixes reach you sooner during the beta.</p>
+<h4>See what's coming</h4>
+<p>Settings › About has a new <b>What's Coming</b> link to the eWiz roadmap: notarized builds, custom charging animations, widgets, Shortcuts actions, battery health over time and more. Requests decide what gets built next, and the roadmap page has a button to suggest one.</p>
       ]]></description>
-      <enclosure url="https://github.com/stroke-app/ewiz/releases/download/v0.20.2/eWiz-0.20.2.dmg" length="3664465" type="application/octet-stream" sparkle:edSignature="jRIMyCIeVE2K6fPl1XsqSO6epxNiXmVcDZWly1zfPfGNnnrYViP018ZBGnCiNPTYZ8FtaXxx28U7DYqyS6ooDw=="/>
+      <enclosure url="https://github.com/stroke-app/ewiz/releases/download/v0.20.3/eWiz-0.20.3.dmg" length="3665734" type="application/octet-stream" sparkle:edSignature="nzot4+w63Za208KDBVz61iFXcRE2iT0fUCO2kBMBT8gPqOvBykIuHbfVpqQy8PG+qBnz4ghSp8yqzbfXvYDBDQ=="/>
     </item>
   </channel>
 </rss>
